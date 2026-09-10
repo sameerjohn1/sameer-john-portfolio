@@ -26,7 +26,7 @@ export const ProjectsSection = () => {
         {projects.map((project, i) => (
           <motion.a
             key={project.id}
-            href={project.link}
+            href={`/projects/${project.id}`}
             className={`group relative overflow-hidden rounded-[2.25rem] block shadow-xl border border-foreground/10 ${project.gridClass}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,9 +53,6 @@ export const ProjectsSection = () => {
                   <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2 tracking-tight drop-shadow-md">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base font-medium text-white/80 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    {project.subtitle}
-                  </p>
                 </div>
 
                 {/* Arrow Action Icon */}

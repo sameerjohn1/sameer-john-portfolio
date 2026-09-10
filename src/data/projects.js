@@ -1,4 +1,4 @@
-export const projects = [
+export const  projects = [
   {
     id: 1,
     title: "MERN E-Commerce Platform with AI Shopping Assistant",
