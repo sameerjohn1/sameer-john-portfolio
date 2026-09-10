@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
+import { buttonVariants } from "../lightswind/button";
 import { Badge } from "../lightswind/badge";
 import { HangingIdCard } from "../lightswind/HangingIdCard";
 import { AuroraTextEffect } from "../lightswind/aurora-text-effect";
@@ -103,17 +104,27 @@ export const HeroSection = () => {
           >
             <Button
               size="lg"
+              onClick={() => {
+                document
+                  .getElementById("career")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
               className="rounded-full px-7 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1"
             >
               View Work <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10"
+            <a
+              href="/assets/Sameer_John_CV_Final%20(3).pdf"
+              download="Sameer_John_Resume.pdf"
+              className={buttonVariants({
+                variant: "outline",
+                size: "lg",
+                className:
+                  "rounded-full px-7 h-12 glass-panel text-foreground font-semibold hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10",
+              })}
             >
               Resume <Download className="w-4 h-4" />
-            </Button>
+            </a>
           </motion.div>
 
           {/* Social Links */}

@@ -49,7 +49,7 @@ export const CareerTimeline = () => {
     <div id="career">
       <ScrollTimeline
         events={careerEvents}
-        title="Experience"
+        title="Work Expeirnece"
         subtitle="Building products, solving problems, and delivering results"
         animationOrder="staggered"
         cardAlignment="alternating"
