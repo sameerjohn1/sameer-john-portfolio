@@ -1,42 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { projects } from "@/data/projects";
 
 export const ProjectsSection = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "AI-Powered Design Platform",
-      subtitle: "Generative assets and automated scaling for e-commerce platforms",
-      link: "#",
-      image: "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-7 h-[420px]",
-    },
-    {
-      id: 2,
-      title: "Global E-Learning",
-      subtitle: "Serving 1.2M+ active students worldwide",
-      link: "#",
-      image: "https://images.pexels.com/photos/15595050/pexels-photo-15595050.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-5 h-[420px]",
-    },
-    {
-      id: 3,
-      title: "Modular ERP System",
-      subtitle: "Enterprise logistics & supply chain manufacturing engine",
-      link: "#",
-      image: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-5 h-[360px]",
-    },
-    {
-      id: 4,
-      title: "Fintech Predictive Dashboard",
-      subtitle: "Real-time analytics, algorithmic trading & risk modeling",
-      link: "#",
-      image: "https://images.pexels.com/photos/6169673/pexels-photo-6169673.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      gridClass: "md:col-span-7 h-[360px]",
-    },
-  ];
-
   return (
     <section id="projects" className="w-full max-w-7xl mx-auto px-6 py-24">
       <motion.div
@@ -50,7 +16,8 @@ export const ProjectsSection = () => {
           Selected <span className="text-gradient-primary">Works</span>
         </h2>
         <p className="text-muted-foreground text-center md:text-left max-w-2xl text-lg">
-          A showcase of complex systems, elegant interfaces, and scalable applications I've engineered.
+          A showcase of complex systems, elegant interfaces, and scalable
+          applications I've engineered.
         </p>
       </motion.div>
 
@@ -68,8 +35,8 @@ export const ProjectsSection = () => {
           >
             {/* Background Image Container */}
             <div className="absolute inset-0 bg-neutral-950">
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
                 loading="lazy"
                 decoding="async"
@@ -90,7 +57,7 @@ export const ProjectsSection = () => {
                     {project.subtitle}
                   </p>
                 </div>
-                
+
                 {/* Arrow Action Icon */}
                 <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shrink-0 opacity-80 group-hover:opacity-100 group-hover:bg-white group-hover:text-black transition-all duration-300 rotate-45 group-hover:rotate-0 z-10 shadow-lg">
                   <ArrowUpRight className="w-6 h-6 text-white group-hover:text-black transition-colors" />
