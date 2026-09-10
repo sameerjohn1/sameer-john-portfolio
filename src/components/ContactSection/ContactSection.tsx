@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, FormEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
@@ -15,9 +15,9 @@ export const ContactSection = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!name.trim() || !email.trim() || !message.trim()) {
@@ -27,12 +27,12 @@ export const ContactSection = () => {
 
     setLoading(true);
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
     emailjs
-      .sendForm(serviceID, templateID, form.current, publicKey)
+      .sendForm(serviceID, templateID, form.current!, publicKey)
       .then(() => {
         toast.success("Message sent successfully!");
 
