@@ -12,7 +12,7 @@ export const CareerTimeline = () => {
       icon: <Globe className="h-4 w-4 mr-2 text-primary" />,
     },
     {
-      year: "Sep 2026 – Present",
+      year: "May 2026 – Present",
       title: "Junior MERN Stack Developer — Contract",
       subtitle: "Sprouto Group",
       description:
