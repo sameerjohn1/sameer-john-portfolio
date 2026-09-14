@@ -53,6 +53,39 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const stopPageScroll = (event: WheelEvent | TouchEvent) => {
+      event.stopPropagation();
+    };
+
+    const protectChatScroll = () => {
+      const messageArea = document.getElementById("chat-messages");
+      if (!messageArea || messageArea.dataset.scrollProtected === "true") {
+        return;
+      }
+
+      messageArea.dataset.scrollProtected = "true";
+      messageArea.addEventListener("wheel", stopPageScroll, { passive: true });
+      messageArea.addEventListener("touchmove", stopPageScroll, {
+        passive: true,
+      });
+    };
+
+    const observer = new MutationObserver(protectChatScroll);
+    observer.observe(document.body, { childList: true, subtree: true });
+    protectChatScroll();
+
+    return () => {
+      observer.disconnect();
+      const messageArea = document.getElementById("chat-messages");
+      if (messageArea) {
+        messageArea.removeEventListener("wheel", stopPageScroll);
+        messageArea.removeEventListener("touchmove", stopPageScroll);
+        delete messageArea.dataset.scrollProtected;
+      }
+    };
+  }, []);
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) {

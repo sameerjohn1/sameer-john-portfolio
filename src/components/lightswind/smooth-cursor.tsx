@@ -2,7 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useSpring } from "framer-motion";
 import { cn } from "../lib/utils";
 
-const DefaultCursorSVG = ({ size = 25, color = "currentColor", className }: { size?: number; color?: string; className?: string }) => {
+const DefaultCursorSVG = ({
+  size = 25,
+  color = "currentColor",
+  className,
+}: {
+  size?: number;
+  color?: string;
+  className?: string;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +140,9 @@ export function SmoothCursor({
         const rect = element.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
-        const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+        const distance = Math.sqrt(
+          Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2),
+        );
         if (distance < magneticDistance) {
           return { x: centerX, y: centerY, distance };
         }
@@ -169,13 +179,17 @@ export function SmoothCursor({
       updateVelocity(currentPos);
       updateTrail(currentPos);
 
-      const speed = Math.sqrt(Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2));
+      const speed = Math.sqrt(
+        Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2),
+      );
       cursorX.set(currentPos.x);
       cursorY.set(currentPos.y);
       onCursorMove?.(currentPos);
 
       if (speed > 0.1 && rotateOnMove) {
-        const currentAngle = Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) + 90;
+        const currentAngle =
+          Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) +
+          90;
         let angleDiff = currentAngle - previousAngle.current;
         if (angleDiff > 180) angleDiff -= 360;
         if (angleDiff < -180) angleDiff += 360;
@@ -269,7 +283,7 @@ export function SmoothCursor({
               top: pos.y,
               translateX: "-50%",
               translateY: "-50%",
-              zIndex: 9998 - index,
+              zIndex: 1000000 - index,
               pointerEvents: "none",
               opacity: ((trailLength - index) / trailLength) * 0.4,
               scale: ((trailLength - index) / trailLength) * 0.7,
@@ -287,10 +301,12 @@ export function SmoothCursor({
           translateY: "-50%",
           rotate: rotateOnMove ? rotation : 0,
           scale: scale,
-          zIndex: 9999,
+          zIndex: 1000001,
           pointerEvents: "none",
           willChange: "transform",
-          filter: glowEffect ? "drop-shadow(0 0 10px rgba(139, 92, 246, 0.5))" : "none",
+          filter: glowEffect
+            ? "drop-shadow(0 0 10px rgba(139, 92, 246, 0.5))"
+            : "none",
         }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -300,7 +316,10 @@ export function SmoothCursor({
           stiffness: 400,
           damping: 30,
         }}
-        className={cn("select-none text-primary pointer-events-none hidden md:block", className)}
+        className={cn(
+          "select-none text-primary pointer-events-none hidden md:block",
+          className,
+        )}
       >
         {cursorElement}
       </motion.div>
