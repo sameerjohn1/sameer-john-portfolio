@@ -114,7 +114,7 @@ export const HeroSection = () => {
               View Work <ArrowRight className="w-4 h-4" />
             </Button>
             <a
-              href="/assets/Sameer_John_CV_Final%20(3).pdf"
+              href="/assets/Sameer_John_CV_Updated.pdf"
               download="Sameer_John_Resume.pdf"
               className={buttonVariants({
                 variant: "outline",
