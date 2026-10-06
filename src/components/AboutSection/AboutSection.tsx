@@ -2,8 +2,16 @@ import { motion } from "framer-motion";
 import { Code2, Globe2, Layout, Users } from "lucide-react";
 
 const stats = [
-  { icon: <Layout className="w-6 h-6" />, label: "Years Experience", value: "2+" },
-  { icon: <Code2 className="w-6 h-6" />, label: "Projects Completed", value: "150+" },
+  {
+    icon: <Layout className="w-6 h-6" />,
+    label: "Years Experience",
+    value: "2+",
+  },
+  {
+    icon: <Code2 className="w-6 h-6" />,
+    label: "Projects Completed",
+    value: "150+",
+  },
   { icon: <Users className="w-6 h-6" />, label: "Happy Clients", value: "50+" },
   { icon: <Globe2 className="w-6 h-6" />, label: "Global Brands", value: "12" },
 ];
@@ -20,14 +28,20 @@ export const AboutSection = () => {
       >
         <div className="flex-1 space-y-8">
           <div>
-           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-  I build <span className="text-gradient-primary">fast, scalable & user-focused</span> web applications
-</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+              I build{" "}
+              <span className="text-gradient-primary">
+                fast, scalable & user-focused
+              </span>{" "}
+              web applications
+            </h2>
 
-<p className="text-lg text-muted-foreground leading-relaxed">
-  I’m a Frontend-focused Full-Stack Developer with 2+ years of experience building modern web applications with React.js, Next.js, Node.js, and MongoDB. I focus on writing clean, maintainable code and turning ideas into responsive, production-ready products. From building reusable UI components and integrating REST APIs to implementing authentication, state management, and backend services, I enjoy solving real-world problems and continuously improving the way products are built.
-</p>
-
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Full Stack Developer with 2+ years of experience, strongest on the
+              frontend with React.js and Next.js. I cut re-renders by about 40%
+              in a production app, and I build the Node.js and MongoDB backend
+              too.
+            </p>
           </div>
         </div>
 
@@ -45,8 +59,12 @@ export const AboutSection = () => {
               <div className="text-primary mb-4 p-3 bg-primary/10 w-max rounded-xl">
                 {stat.icon}
               </div>
-              <h3 className="text-3xl font-bold text-foreground mb-1">{stat.value}</h3>
-              <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+              <h3 className="text-3xl font-bold text-foreground mb-1">
+                {stat.value}
+              </h3>
+              <p className="text-sm font-medium text-muted-foreground">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -54,4 +72,3 @@ export const AboutSection = () => {
     </section>
   );
 };
-

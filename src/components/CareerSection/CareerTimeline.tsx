@@ -8,40 +8,48 @@ export const CareerTimeline = () => {
       title: "Backend Developer (MERN Stack) — Freelance",
       subtitle: "Self-Employed",
       description:
-        "Architecting and developing backend services for a full-stack travel-planning platform using Node.js, Express.js, MongoDB Atlas, and RESTful APIs. Implemented JWT authentication, secure password hashing, core Mongoose schemas, and deployed production APIs to Vercel. Collaborating on API contracts and building role-based access control, Trip CRUD, and Itinerary Management APIs.",
+        "Built the backend for a travel-planning platform from scratch with Node.js, Express and MongoDB Atlas, and agreed on API contracts with the frontend developer. Set up JWT authentication with bcrypt password hashing, designed the Mongoose schemas, and deployed the APIs on Vercel. Currently building role-based access control, Trip CRUD and itinerary management APIs.",
       icon: <Globe className="h-4 w-4 mr-2 text-primary" />,
     },
     {
-      year: "May 2026 – Present",
+      year: "May 2026 – Jun 2026",
       title: "Junior MERN Stack Developer — Contract",
       subtitle: "Sprouto Group",
       description:
-        "Developing and maintaining MERN stack applications with a focus on backend security, transactional email workflows, and scalable frontend architecture. Integrated Resend API end-to-end with React.js and Node.js/Express.js, strengthened protected route architecture, and improved frontend performance through code splitting and reusable components. Participating in code reviews to maintain engineering quality.",
+        "Worked across a React.js and Node.js codebase. Built transactional email with the Resend API on the Express backend and connected it to the React frontend, tightened the protected route setup so unauthorized users are blocked, and reduced bundle size with code splitting and more reusable components. Took part in code reviews.",
       icon: <Layers className="h-4 w-4 mr-2 text-primary" />,
     },
     {
       year: "Nov 2025 – Apr 2026",
-      title: "Frontend Developer — Freelance",
+      title: "Full Stack Developer — Freelance",
       subtitle: "Self-Employed",
       description:
-        "Built and shipped production-ready web applications using React.js, Next.js, TypeScript, and the MERN stack. Developed an AI customer support chatbot with Next.js App Router, Google Gemini API, MongoDB, and multi-tenant authentication via Scalekit. Also built a full-stack MERN Expense Tracker with JWT authentication, protected routes, CRUD operations, and interactive analytics.",
+        "Built and shipped two projects on my own, both live on Vercel. An AI customer support chatbot with Next.js App Router, TypeScript, the Gemini API and MongoDB, with multi-tenant login through Scalekit. And a MERN expense tracker with JWT auth, protected routes, full CRUD and an analytics dashboard.",
       icon: <Briefcase className="h-4 w-4 mr-2 text-primary" />,
     },
     {
-      year: "May 2024 – Oct 2024",
+      year: "May 2024 – Oct 2025",
       title: "Associate Frontend Developer",
       subtitle: "Deutics Global",
       description:
-        "Developed and maintained frontend features for Camzify, an AI-powered surveillance platform, using React.js and Redux Toolkit. Built scalable dashboards for Admin, Sub-Admin, and User workflows, including video backup management, license plans, AI heat maps, notifications, advanced filtering, and pagination. Improved performance through lazy loading, memoization, and efficient component architecture while translating Figma designs into responsive interfaces.",
+        "Started as a React intern, then trainee, and grew into the Associate role. Worked on Camzify, an AI-powered surveillance platform, with React.js and Redux Toolkit, building dashboards for Admin, Sub-Admin and User roles: video backup management, license plans, AI heat maps, notifications, filtering and pagination. Owned 20+ React components still live in production, integrated 15+ REST APIs with RTK Query, and cut unnecessary re-renders by about 40% with memoization and better hook patterns. Turned Figma designs into responsive interfaces.",
       icon: <Award className="h-4 w-4 mr-2 text-primary" />,
     },
     {
       year: "Jan 2024 – Mar 2024",
       title: "Junior React.js Developer",
-      subtitle: "Znz Technologies",
+      subtitle: "ZNZ",
       description:
-        "Contributed to an interactive e-learning platform using React.js, developing reusable and modular components with scalable state management. Built user engagement features including gig management, likes, comments, and real-time chat functionality. Ensured responsive experiences across mobile, tablet, and desktop devices.",
+        "Worked on an interactive e-learning platform in React.js, building reusable components and managing state. Built gig management, likes, comments and real-time chat, and kept the layouts responsive on mobile, tablet and desktop.",
       icon: <Users className="h-4 w-4 mr-2 text-primary" />,
+    },
+    {
+      year: "Feb 2022 – Oct 2022",
+      title: "React Developer",
+      subtitle: "Vvork Cloud Technologies",
+      description:
+        "My first development job. Built frontend features with React.js and Bootstrap, got solid with JavaScript fundamentals, and learned how production codebases are structured.",
+      icon: <Briefcase className="h-4 w-4 mr-2 text-primary" />,
     },
   ];
 

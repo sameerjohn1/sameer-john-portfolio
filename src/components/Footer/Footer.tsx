@@ -55,7 +55,7 @@ export const Footer = () => {
                 Sameer John
               </span>
               <span className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase mt-0.5">
-                React.js & Next.js | MERN Stack Developer
+                Full Stack Developer | React.js & Next.js | MERN Stack{" "}
               </span>
             </div>
           </div>

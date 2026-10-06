@@ -90,10 +90,9 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            I build scalable, high-performance web applications with clean
-            architecture, intuitive user experiences, and modern development
-            practices. Specialized in React.js, Next.js, and MERN stack
-            development.
+            Full Stack Developer with 2+ years of experience building React.js
+            and Next.js apps. I cut re-renders by about 40% in a production app,
+            and I handle the backend with Node.js and MongoDB too.
           </motion.p>
 
           <motion.div
@@ -209,7 +208,7 @@ export const HeroSection = () => {
                   </h3>
 
                   <div className="inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold">
-                    <span>Frontend & MERN Stack Developer</span>
+                    <span>Full Stack Developer</span>
                   </div>
                 </div>
 
@@ -231,7 +230,7 @@ export const HeroSection = () => {
                       Stack
                     </span>
                     <span className="font-bold text-foreground text-xs">
-                      MERN
+                      MERN Stack
                     </span>
                   </div>
 
@@ -276,7 +275,7 @@ export const HeroSection = () => {
                     </span>
 
                     <span className="text-muted-foreground font-semibold text-[9px] uppercase tracking-wider">
-                      SOFTWARE DEVELOPER
+                      FULL STACK DEV
                     </span>
                   </div>
                 </div>
