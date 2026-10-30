@@ -44,7 +44,7 @@ export const HeroSection = () => {
             <Badge
               variant="outline"
               size="lg"
-              className="gap-2.5 py-1.5 px-4 glass-panel border-foreground/10"
+              className="gap-2.5 py-1.5 px-4 glass-panel border-foreground/10 "
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -77,7 +77,7 @@ export const HeroSection = () => {
             <div className="hidden dark:block">
               <AuroraTextEffect
                 text="Sameer John"
-                fontSize="clamp(3rem, 6.5vw, 5.5rem)"
+                fontSize="clamp(3rem, 6vw, 5rem)"
                 className="bg-transparent overflow-visible p-0 justify-start"
                 textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold"
               />
@@ -90,9 +90,9 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Full Stack Developer with 2+ years of experience building React.js
-            and Next.js apps. I cut re-renders by about 40% in a production app,
-            and I handle the backend with Node.js and MongoDB too.
+             Full Stack Developer (2+ years) building high-performance SaaS and
+  e-commerce apps with React.js, Next.js, Node.js, and MongoDB. Reduced
+  re-renders by 40% in production.
           </motion.p>
 
           <motion.div

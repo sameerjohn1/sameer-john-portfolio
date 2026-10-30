@@ -37,10 +37,10 @@ export const AboutSection = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Full Stack Developer with 2+ years of experience, strongest on the
-              frontend with React.js and Next.js. I cut re-renders by about 40%
-              in a production app, and I build the Node.js and MongoDB backend
-              too.
+           Full Stack Developer with 2+ years of experience, specializing in
+  high-performance React.js and Next.js applications. Reduced re-renders by
+  40% in production. Build scalable Node.js, MongoDB, and REST API backends
+  for SaaS and e-commerce, using AI-assisted development to ship faster.
             </p>
           </div>
         </div>
