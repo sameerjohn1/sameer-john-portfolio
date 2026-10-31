@@ -6,7 +6,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Twitter,
 } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
@@ -27,7 +26,7 @@ export const HeroSection = () => {
       <DotPattern width={16} height={16} cx={1} cy={1} cr={1} glow />
 
       {/* Main Content Area */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 pb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 pb-12 mt-20">
         {/* Left Content */}
         <motion.div
           className="flex-1 flex flex-col items-center md:items-start text-center md:text-left pt-0"
@@ -44,7 +43,7 @@ export const HeroSection = () => {
             <Badge
               variant="outline"
               size="lg"
-              className="gap-2.5 py-1.5 px-4 glass-panel border-foreground/10 "
+              className="gap-2.5 py-1.5 px-4 glass-panel  border-foreground/10 "
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -90,9 +89,8 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-             Full Stack Developer (2+ years) building high-performance SaaS and
-  e-commerce apps with React.js, Next.js, Node.js, and MongoDB. Reduced
-  re-renders by 40% in production.
+             Full Stack Developer (2+ years) building fast, scalable web apps with
+             React, Next.js, Node.js and MongoDB. Cut production re-renders by ~40%.
           </motion.p>
 
           <motion.div
@@ -113,7 +111,7 @@ export const HeroSection = () => {
               View Work <ArrowRight className="w-4 h-4" />
             </Button>
             <a
-              href="/assets/Sameer_John_CV_Updated.pdf"
+              href="/assets/Sameer_John_Resume.pdf"
               download="Sameer_John_Resume.pdf"
               className={buttonVariants({
                 variant: "outline",

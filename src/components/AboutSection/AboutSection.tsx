@@ -1,19 +1,27 @@
 import { motion } from "framer-motion";
-import { Code2, Globe2, Layout, Users } from "lucide-react";
+import { Briefcase, Component, Server, Zap } from "lucide-react";
 
 const stats = [
   {
-    icon: <Layout className="w-6 h-6" />,
+    icon: <Briefcase className="w-6 h-6" />,
     label: "Years Experience",
     value: "2+",
   },
   {
-    icon: <Code2 className="w-6 h-6" />,
-    label: "Projects Completed",
-    value: "150+",
+    icon: <Component className="w-6 h-6" />,
+    label: "Production React Components",
+    value: "20+",
   },
-  { icon: <Users className="w-6 h-6" />, label: "Happy Clients", value: "50+" },
-  { icon: <Globe2 className="w-6 h-6" />, label: "Global Brands", value: "12" },
+  {
+    icon: <Server className="w-6 h-6" />,
+    label: "REST APIs Integrated",
+    value: "15+",
+  },
+  {
+    icon: <Zap className="w-6 h-6" />,
+    label: "Fewer Re-renders in Production",
+    value: "~40%",
+  },
 ];
 
 export const AboutSection = () => {
@@ -38,9 +46,9 @@ export const AboutSection = () => {
 
             <p className="text-lg text-muted-foreground leading-relaxed">
            Full Stack Developer with 2+ years of experience, specializing in
-  high-performance React.js and Next.js applications. Reduced re-renders by
-  40% in production. Build scalable Node.js, MongoDB, and REST API backends
-  for SaaS and e-commerce, using AI-assisted development to ship faster.
+          high-performance React.js and Next.js applications. Reduced re-renders by
+          40% in production. Build scalable Node.js, MongoDB, and REST API backends
+          for SaaS and e-commerce, using AI-assisted development to ship faster.
             </p>
           </div>
         </div>
