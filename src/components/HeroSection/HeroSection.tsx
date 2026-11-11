@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  ArrowRight,
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
 import { buttonVariants } from "../lightswind/button";
@@ -89,8 +83,9 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-             Full Stack Developer (2+ years) building fast, scalable web apps with
-             React, Next.js, Node.js and MongoDB. Cut production re-renders by ~40%.
+            Full Stack Developer (2+ years) building fast, scalable web apps
+            with React, Next.js, Node.js and MongoDB. Cut production re-renders
+            by ~40%.
           </motion.p>
 
           <motion.div
@@ -111,8 +106,8 @@ export const HeroSection = () => {
               View Work <ArrowRight className="w-4 h-4" />
             </Button>
             <a
-              href="/assets/Sameer_John_Resume.pdf"
-              download="Sameer_John_Resume.pdf"
+              href="/assets/Sameer_John_Full_Stack_Developer_Resume.pdf"
+              download="Sameer_John_Full_Stack_Developer_Resume.pdf"
               className={buttonVariants({
                 variant: "outline",
                 size: "lg",
