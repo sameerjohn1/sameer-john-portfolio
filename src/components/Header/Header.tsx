@@ -87,13 +87,13 @@ export default function Header() {
               onClick={() => handleScrollTo("#hero")}
               className="cursor-pointer font-extrabold text-lg flex items-center gap-3 group select-none"
             >
-              <div className="relative w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 via-primary to-sky-400 p-[1px] shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-full bg-background rounded-[11px] flex items-center justify-center">
-                  <span className="font-extrabold text-xs tracking-tighter bg-gradient-to-r from-purple-500 to-sky-400 bg-clip-text text-transparent">
-                    SJ
-                  </span>
-                </div>
-              </div>
+              <img
+                src="/logo.svg"
+                alt="Sameer John logo"
+                width={36}
+                height={36}
+                className="w-9 h-9 drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+              />
               <div className="flex flex-col text-left">
                 <span className="font-extrabold tracking-tight text-foreground text-sm leading-none group-hover:text-primary transition-colors">
                   Sameer John

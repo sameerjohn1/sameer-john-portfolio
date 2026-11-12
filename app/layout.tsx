@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Sameer John — Portfolio",
   description:
     "A premium portfolio for Sameer John, Director of Product Engineering.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

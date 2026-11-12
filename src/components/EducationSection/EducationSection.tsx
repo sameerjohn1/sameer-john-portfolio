@@ -1,45 +1,81 @@
 import SkillCategory from "./SkillCategory";
 import { motion } from "framer-motion";
-import { GraduationCap, BookOpen, Award, CheckCircle2, Calendar, Building2, Sparkles } from "lucide-react";
+import {
+  GraduationCap,
+  Award,
+  CheckCircle2,
+  Calendar,
+  Building2,
+} from "lucide-react";
+import { SiAnthropic, SiClaude } from "react-icons/si";
 import { MagicCard } from "../lightswind/magic-card";
 
 export const EducationSection = () => {
- const education = [
-  {
-    degree: "Intermediate – Pre-Engineering",
-    school: "Superior College",
-    year: "Completed",
-    badge: "Academic Foundation",
-    badgeIcon: GraduationCap,
-    badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
-    icon: GraduationCap,
-    details: [
-      "Completed Intermediate education with a focus on Pre-Engineering",
-      "Built a strong foundation in Mathematics, Physics, and Computer Science",
-      "Developed problem-solving and analytical thinking skills through academic coursework",
-      "Established a foundation for pursuing software development and programming"
-    ]
-  },
-  {
-    degree: "Certified MERN Stack Developer",
-    school: "Vvork Cloud Technologies",
-    year: "Issued Sep 2022",
-    badge: "Professional Certification",
-    badgeIcon: Award,
-    badgeColor: "text-primary bg-primary/10 border-primary/30",
-    icon: Award,
-    details: [
-      "Completed professional training focused on the MERN stack",
-      "Gained practical knowledge of MongoDB, Express.js, React.js, and Node.js",
-      "Developed full-stack web applications using modern JavaScript technologies",
-      "Strengthened skills in frontend development, backend APIs, and database integration"
-    ]
-  }
-];
+  const education = [
+    {
+      degree: "Intermediate – Pre-Engineering",
+      school: "Superior College",
+      year: "Completed",
+      badge: "Academic Foundation",
+      badgeIcon: GraduationCap,
+      badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+      icon: GraduationCap,
+      details: [
+        "Completed Intermediate education with a focus on Pre-Engineering",
+        "Built a strong foundation in Mathematics, Physics, and Computer Science",
+        "Developed problem-solving and analytical thinking skills through academic coursework",
+        "Established a foundation for pursuing software development and programming",
+      ],
+    },
+    {
+      degree: "Certified MERN Stack Developer",
+      school: "Vvork Cloud Technologies",
+      year: "Issued Sep 2022",
+      badge: "Professional Certification",
+      badgeIcon: Award,
+      badgeColor: "text-primary bg-primary/10 border-primary/30",
+      icon: Award,
+      details: [
+        "Completed professional training focused on the MERN stack",
+        "Gained practical knowledge of MongoDB, Express.js, React.js, and Node.js",
+        "Developed full-stack web applications using modern JavaScript technologies",
+        "Strengthened skills in frontend development, backend APIs, and database integration",
+      ],
+    },
+    {
+      degree: "Claude Code 101",
+      school: "Anthropic",
+      year: "Issued Nov 2026",
+      badge: "Anthropic Certificate",
+      badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/30",
+      logoIcon: SiClaude,
+      logoColor: "#D97757",
+      credentialId: "xuy4ii5ka297",
+      details: [
+        "Completed Anthropic's official course on Claude Code, its agentic coding tool",
+        "Learned AI-assisted workflows for writing, debugging, and reviewing code",
+        "Applied AI-assisted development practices to full-stack MERN projects",
+      ],
+    },
+    {
+      degree: "Claude 101",
+      school: "Anthropic",
+      year: "Issued Nov 2026",
+      badge: "Anthropic Certificate",
+      badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/30",
+      logoIcon: SiAnthropic,
+      logoColor: "#191919",
+      credentialId: "y7c8p469prxd",
+      details: [
+        "Completed Anthropic's official foundational course on working with Claude",
+        "Learned effective prompting and practical everyday AI workflows",
+        "Using AI tools to speed up research, development, and problem-solving",
+      ],
+    },
+  ];
 
   return (
     <section id="education" className="max-w-7xl mx-auto px-6 py-24 space-y-20">
-      
       {/* Education Header & Cards */}
       <div>
         <motion.div
@@ -54,19 +90,21 @@ export const EducationSection = () => {
               <GraduationCap className="w-6 h-6" />
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-            Education & <span className="text-gradient-primary">Certifications</span>
+              Education &{" "}
+              <span className="text-gradient-primary">Certifications</span>
             </h2>
           </div>
           <p className="text-muted-foreground text-lg max-w-2xl">
- Academic background and professional certifications that support my
-  foundation in software development and full-stack web engineering.
-  </p>
+            Academic background and professional certifications that support my
+            foundation in software development and full-stack web engineering.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {education.map((edu, i) => {
             const DegreeIcon = edu.icon;
             const BadgeIcon = edu.badgeIcon;
+            const LogoIcon = edu.logoIcon;
             return (
               <motion.div
                 key={i}
@@ -86,11 +124,22 @@ export const EducationSection = () => {
                     <div>
                       {/* Header with Icon and Distinction Badge */}
                       <div className="flex items-start justify-between gap-4 mb-6">
-                        <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/25 text-primary flex items-center justify-center shadow-sm">
-                          <DegreeIcon className="w-7 h-7 text-primary" />
-                        </div>
-                        <span className={`px-3.5 py-1.5 rounded-full border text-xs font-extrabold flex items-center gap-1.5 shadow-sm ${edu.badgeColor}`}>
-                          <BadgeIcon className="w-3.5 h-3.5" />
+                        {LogoIcon ? (
+                          <div className="w-14 h-14 rounded-2xl bg-white border border-primary/25 flex items-center justify-center p-3 shadow-sm">
+                            <LogoIcon
+                              className="w-full h-full"
+                              style={{ color: edu.logoColor }}
+                            />
+                          </div>
+                        ) : DegreeIcon ? (
+                          <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/25 text-primary flex items-center justify-center shadow-sm">
+                            <DegreeIcon className="w-7 h-7 text-primary" />
+                          </div>
+                        ) : null}
+                        <span
+                          className={`px-3.5 py-1.5 rounded-full border text-xs font-extrabold flex items-center gap-1.5 shadow-sm ${edu.badgeColor}`}
+                        >
+                          {BadgeIcon && <BadgeIcon className="w-3.5 h-3.5" />}
                           {edu.badge}
                         </span>
                       </div>
@@ -99,10 +148,11 @@ export const EducationSection = () => {
                       <h3 className="text-2xl font-extrabold text-foreground tracking-tight mb-2">
                         {edu.degree}
                       </h3>
-                      
+
                       <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-muted-foreground mb-6 pb-4 border-b border-border/60">
                         <span className="flex items-center gap-1.5 text-foreground font-bold">
-                          <Building2 className="w-3.5 h-3.5 text-primary" /> {edu.school}
+                          <Building2 className="w-3.5 h-3.5 text-primary" />{" "}
+                          {edu.school}
                         </span>
                         <span>•</span>
                         <span className="flex items-center gap-1.5 font-mono text-primary font-bold">
@@ -110,12 +160,26 @@ export const EducationSection = () => {
                         </span>
                       </div>
 
+                      {edu.credentialId && (
+                        <p className="text-xs font-mono text-muted-foreground mb-4">
+                          Credential ID:{" "}
+                          <span className="text-foreground/90">
+                            {edu.credentialId}
+                          </span>
+                        </p>
+                      )}
+
                       {/* Key Highlights List */}
                       <ul className="space-y-3.5">
                         {edu.details.map((detail, j) => (
-                          <li key={j} className="text-sm text-muted-foreground flex items-start gap-3 leading-relaxed">
+                          <li
+                            key={j}
+                            className="text-sm text-muted-foreground flex items-start gap-3 leading-relaxed"
+                          >
                             <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            <span className="text-foreground/90 font-medium">{detail}</span>
+                            <span className="text-foreground/90 font-medium">
+                              {detail}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -132,7 +196,6 @@ export const EducationSection = () => {
       <div>
         <SkillCategory />
       </div>
-
     </section>
   );
 };
