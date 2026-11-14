@@ -14,8 +14,10 @@ const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Education", href: "#education" },
+  { name: "Skills", href: "#skills" },
   { name: "Career", href: "#career" },
   { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -106,7 +108,7 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex flex-1 justify-center">
-              <ul className="flex space-x-8">
+              <ul className="flex space-x-5 lg:space-x-8">
                 {navItems.map((item) => (
                   <motion.li
                     key={item.name}
