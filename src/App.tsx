@@ -7,7 +7,7 @@ import { AboutSection } from "./components/AboutSection/AboutSection";
 import { ServicesSection } from "./components/ServicesSection/ServicesSection";
 import { ProjectsSection } from "./components/ProjectsSection/ProjectsSection";
 import { EducationSection } from "./components/EducationSection/EducationSection";
-import { CareerTimeline } from "./components/CareerSection/CareerTimeline";
+import { ExperienceTimeline } from "./components/ExperienceSection/ExperienceTimeline";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
 import { ContactSection } from "./components/ContactSection/ContactSection";
 import { Footer } from "./components/Footer/Footer";
@@ -106,8 +106,8 @@ function App() {
     },
     {
       icon: <Briefcase size={20} />,
-      label: "Career",
-      onClick: () => scrollToSection("career"),
+      label: "Experience",
+      onClick: () => scrollToSection("experience"),
     },
     {
       icon: <FolderKanban size={20} />,
@@ -142,7 +142,7 @@ function App() {
           <AboutSection />
           <ServicesSection />
           <ProjectsSection />
-          <CareerTimeline />
+          <ExperienceTimeline />
           <EducationSection />
           <TestimonialsSection />
           <ContactSection />

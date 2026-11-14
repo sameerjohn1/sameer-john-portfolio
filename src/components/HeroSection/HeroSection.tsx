@@ -98,7 +98,7 @@ export const HeroSection = () => {
               size="lg"
               onClick={() => {
                 document
-                  .getElementById("career")
+                  .getElementById("experience")
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               className="rounded-full px-7 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1"

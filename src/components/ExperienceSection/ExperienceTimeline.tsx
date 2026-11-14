@@ -1,8 +1,8 @@
 import { ScrollTimeline } from "../lightswind/scroll-timeline";
 import { Briefcase, Award, Layers, Users, Globe } from "lucide-react";
 
-export const CareerTimeline = () => {
-  const careerEvents = [
+export const ExperienceTimeline = () => {
+  const experienceEvents = [
     {
       year: "Sep 2026 – Present",
       title: "Backend Developer (MERN Stack) — Freelance",
@@ -54,10 +54,10 @@ export const CareerTimeline = () => {
   ];
 
   return (
-    <div id="career">
+    <div id="experience">
       <ScrollTimeline
-        events={careerEvents}
-        title="Work Expeirnece"
+        events={experienceEvents}
+        title="Work Experience"
         subtitle="Building products, solving problems, and delivering results"
         animationOrder="staggered"
         cardAlignment="alternating"
